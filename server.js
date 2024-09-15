@@ -1,7 +1,7 @@
 const admin = require('firebase-admin');
 const TelegramBot = require('node-telegram-bot-api');
 const { v4: uuidv4 } = require('uuid');
-const serviceAccount = require('./qolda-app-firebase-adminsdk-v6zp2-b47f6d71af.json');
+
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
