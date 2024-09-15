@@ -59,8 +59,6 @@ bot.setMyCommands([
     { command: '/start', description: 'Начало работы с ботом' },
     { command: '/profile', description: 'Просмотр профиля' },
     { command: '/search', description: 'Поиск единомышленников' },
-    { command: '/posts', description: 'Просмотр постов' },
-
     { command: '/subscribe', description: 'Подписка на получение новых постов' },
     { command: '/unsubscribe', description: 'Отписка от получение новых постов' },
 ]);
@@ -95,27 +93,7 @@ bot.onText(/\/profile/, async (msg) => {
     showProfile(bot, chatId);
 });
 
-bot.onText(/\/events/, async (msg) => {
-    const chatId = msg.chat.id;
 
-    try {
-        const usersRef = db.collection('bot_users');
-        const snapshot = await usersRef.where('chat_id', '==', chatId).get();
-
-        if (snapshot.empty) {
-
-            bot.sendMessage(chatId, 'Добро пожаловать! Давайте зарегистрируемся. Как вас зовут?');
-            userSteps[chatId] = { step: 'name' };
-        } else {
-            const botMsg = await bot.sendMessage(chatId, 'Ваш запрос обрабатыавется');
-            showEvents(bot, chatId);
-            bot.deleteMessage(chatId, msg)
-        }
-    } catch (error) {
-        console.error('Ошибка при получении пользователя:', error);
-        bot.sendMessage(chatId, 'Ошибка при получении данных пользователя.');
-    }
-});
 
 
 
