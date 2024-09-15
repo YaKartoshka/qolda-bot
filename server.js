@@ -597,14 +597,14 @@ bot.on('message', async (msg) => {
         else {
             if (commands.includes(text)) return;
             console.log(chatId)
-            bot.sendMessage(chatId, 'Бот на данный момент кушает и хочет спать. Попробуйте позже');
-            // sendWebhookRequest(chatId, text, (error, response) => {
-            //     if (error) {
-            //         console.error('Error:', error);
-            //     } else {
-            //         console.log('Response data:', response);
-            //     }
-            // });
+            // bot.sendMessage(chatId, 'Бот на данный момент кушает и хочет спать. Попробуйте позже');
+            sendWebhookRequest(chatId, text, (error, response) => {
+                if (error) {
+                    console.error('Error:', error);
+                } else {
+                    console.log('Response data:', response);
+                }
+            });
         }
 });
 
