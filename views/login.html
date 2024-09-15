@@ -75,11 +75,11 @@
                     password: password
                 }, success: function (res) {
                     console.log(res)
-                    if (res.r == 200) {
+                    if (res.r == 1) {
                         ambianceElement.html('<p>Success!</p>').addClass('success');
                         setTimeout(function () {
                             ambianceElement.removeClass('show success error info too-many-requests').html('');
-                            window.location.href = '/admin/products';
+                            window.location.href = '/';
                         }, 1000);
                     } else if (res.r == 0) {
                         ambianceElement.html('<p>Неверный пароль</p>').addClass('error');

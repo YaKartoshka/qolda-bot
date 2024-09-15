@@ -37,7 +37,9 @@ app.set('view engine', 'html');
 // routes
 const index = require('./routes/index')
 const auth = require('./routes/auth');
-app.use('/auth', auth)
+const events = require('./routes/events')
+app.use('/auth', auth);
+app.use('/events', events);
 app.use('/', index);
 
 

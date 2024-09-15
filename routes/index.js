@@ -8,8 +8,8 @@ function isAuthenticated(req, res, next) {
     next();
 };
 
-router.get('/', (req, res, next) => {
-    res.render('index');
+router.get('/', isAuthenticated, (req, res, next) => {
+    res.render('index', {user_id: req.session.user_id});
 });
 
 router.get('/login', (req, res) => {
