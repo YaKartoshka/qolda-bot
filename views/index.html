@@ -32,13 +32,13 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Главная</a>
+                            <a class="nav-link active" href="/">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Shop</a>
+                            <a class="nav-link" href="/shop">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Telegram Bot</a>
+                            <a class="nav-link" href="https://t.me/QosylNet_bot">Telegram Bot</a>
                         </li>
                     </ul>
                     <form class="d-flex text-white">
@@ -96,208 +96,7 @@
 
     <script>
         var globalEvents;
-        // const events = [
-        //     {
-        //         title: 'Экологическая конференция "Зеленая планета"',
-        //         date: '15-16 октября 2024',
-        //         city: 'Алматы',
-        //         description: 'Мероприятие, посвященное актуальным проблемам экологии и устойчивого развития. В программе доклады экспертов, панельные дискуссии и практические семинары.',
-        //         category: 'Экология и устойчивое развитие',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Эко-фестиваль "Зеленый город"',
-        //         date: '20-22 ноября 2024',
-        //         city: 'Нур-Султан',
-        //         description: 'Фестиваль, включающий выставку экологически чистых продуктов и технологий, мастер-классы по переработке отходов и экологическим практикам.',
-        //         category: 'Экология и устойчивое развитие',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Экологический квест "Спасем планету"',
-        //         date: '2 декабря 2024',
-        //         city: 'Алматы',
-        //         description: 'Интерактивный квест, где участники решают экологические задачи и получают информацию о способах сохранения окружающей среды.',
-        //         category: 'Экология и устойчивое развитие',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Выставка "Устойчивые технологии"',
-        //         date: '15-17 ноября 2024',
-        //         city: 'Нур-Султан',
-        //         description: 'Выставка современных технологий и решений в области устойчивого развития и экологии.',
-        //         category: 'Экология и устойчивое развитие',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Экологический пикник "Природа и мы"',
-        //         date: '30 сентября 2024',
-        //         city: 'Шымкент',
-        //         description: 'Пикник на природе с мероприятиями по уборке территории, эко-играм и образовательными мастер-классами.',
-        //         category: 'Экология и устойчивое развитие',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-
-        //     {
-        //         title: 'Обсуждение "Эко-дружелюбные города"',
-        //         date: '5 декабря 2024',
-        //         city: 'Алматы',
-        //         description: 'Обсуждение инициатив и проектов, направленных на создание экологически чистых городов.',
-        //         category: 'Экология и устойчивое развитие',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Фестиваль защиты животных "Сердце для хвостиков"',
-        //         date: '8-9 октября 2024',
-        //         city: 'Алматы',
-        //         description: 'Фестиваль с выставкой животных, благотворительными акциями и мастер-классами по уходу за питомцами.',
-        //         category: 'Защита животных',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-
-        //     {
-        //         title: 'Благотворительная ярмарка в поддержку приютов для животных',
-        //         date: '28 сентября 2024',
-        //         city: 'Алматы',
-        //         description: 'Ярмарка с продажей товаров и услуг, где все собранные средства будут направлены на поддержку приютов для животных.',
-        //         category: 'Защита животных',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Курс по обучению животных "Умные питомцы"',
-        //         date: '15 октября 2024',
-        //         city: 'Нур-Султан',
-        //         description: 'Курс по обучению домашних животных основным командам и трюкам для улучшения их поведения и общения.',
-        //         category: 'Защита животных',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-
-        //     {
-        //         title: 'Конференция по защите прав животных "Голос безмолвных"',
-        //         date: '30 ноября 2024',
-        //         city: 'Нур-Султан',
-        //         description: 'Конференция с участием экспертов и правозащитников, обсуждающая актуальные проблемы защиты прав животных.',
-        //         category: 'Защита животных',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Фестиваль кошек "Кошачьи истории"',
-        //         date: '15 октября 2024',
-        //         city: 'Шымкент',
-        //         description: 'Фестиваль, посвященный кошкам, с выставками, конкурсами и мероприятиями для любителей этих животных.',
-        //         category: 'Защита животных',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Психологическая поддержка для владельцев животных',
-        //         date: '25 сентября 2024',
-        //         city: 'Алматы',
-        //         description: 'Семинар по психологической поддержке владельцев животных, включая советы по управлению стрессом и эмоциональным состоянием питомцев.',
-        //         category: 'Защита животных',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-
-        //     {
-        //         title: 'Благотворительный бал "Сердце к сердцу"',
-        //         date: '5 декабря 2024',
-        //         city: 'Алматы',
-        //         description: 'Благотворительное мероприятие, на котором собираются средства для поддержки социальных инициатив и программ.',
-        //         category: 'Социальное предпринимательство',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Панельная дискуссия "Будущее социального предпринимательства"',
-        //         date: '10 октября 2024',
-        //         city: 'Нур-Султан',
-        //         description: 'Панельная дискуссия с участием экспертов и лидеров мнений о будущем социального предпринимательства.',
-        //         category: 'Социальное предпринимательство',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Форум "Социальные инновации и стартапы"',
-        //         date: '15 ноября 2024',
-        //         city: 'Шымкент',
-        //         description: 'Форум, на котором представлены инновационные стартапы и проекты в области социальных изменений и устойчивого развития.',
-        //         category: 'Социальное предпринимательство',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-
-        //     {
-        //         title: 'Конференция по IT-инновациям "Будущее технологий"',
-        //         date: '5 декабря 2024',
-        //         city: 'Шымкент',
-        //         description: 'Конференция, посвященная последним достижениям в области IT и инновационных технологий.',
-        //         category: 'Технологии и инновации',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Воркшоп "Создание мобильных приложений"',
-        //         date: '20 ноября 2024',
-        //         city: 'Алматы',
-        //         description: 'Практический мастер-класс по разработке мобильных приложений и основам UX/UI дизайна.',
-        //         category: 'Технологии и инновации',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Хакатон по разработке решений для умного города',
-        //         date: '15-17 октября 2024',
-        //         city: 'Нур-Султан',
-        //         description: 'Хакатон, на котором участники разрабатывают решения для улучшения городской инфраструктуры и управления ресурсами.',
-        //         category: 'Технологии и инновации',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Курс "Основы искусственного интеллекта"',
-        //         date: '1 ноября 2024',
-        //         city: 'Шымкент',
-        //         description: 'Образовательный курс по искусственному интеллекту и машинному обучению, включая практические занятия и проекты.',
-        //         category: 'Технологии и инновации',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-
-
-        //     {
-        //         title: 'Спортивные соревнования по командным видам спорта',
-        //         date: '15 ноября 2024',
-        //         city: 'Алматы',
-        //         description: 'Соревнования по различным командным видам спорта, таким как футбол, баскетбол и волейбол.',
-        //         category: 'Спорт и активный образ жизни',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Фестиваль уличного спорта',
-        //         date: '30 сентября 2024',
-        //         city: 'Нур-Султан',
-        //         description: 'Фестиваль уличных видов спорта, таких как скейтбординг, паркур и уличный баскетбол.',
-        //         category: 'Спорт и активный образ жизни',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Воркшоп "Техники восстановления после тренировки"',
-        //         date: '25 октября 2024',
-        //         city: 'Шымкент',
-        //         description: 'Воркшоп по методам восстановления после тренировок, включая растяжку, массаж и правильное питание.',
-        //         category: 'Спорт и активный образ жизни',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Турнир по настольным играм',
-        //         date: '10 декабря 2024',
-        //         city: 'Алматы',
-        //         description: 'Турнир по различным настольным играм, от стратегий до развлечений для всей семьи.',
-        //         category: 'Спорт и активный образ жизни',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     },
-        //     {
-        //         title: 'Курс "Основы бега и тренировки"',
-        //         date: '5 декабря 2024',
-        //         city: 'Нур-Султан',
-        //         description: 'Курс по основам бега, планированию тренировок и достижению спортивных целей.',
-        //         category: 'Спорт и активный образ жизни',
-        //         image: 'https://via.placeholder.com/400x200',
-        //     }
-        // ];
-
+        
         const eventsList = document.getElementById('eventsList');
         const cityFilter = document.getElementById('cityFilter');
         const categoryFilter = document.getElementById('categoryFilter');
@@ -320,7 +119,7 @@
 
 
         getEvents()
-       
+
 
         function renderEvents(events) {
 
@@ -332,7 +131,7 @@
                             <div class="card event-card">
                                 <div class="card-body">
                                     <h5 class="card-title">${event.title}</h5>
-                                    <p class="card-text">${event.date}</p>
+                                    <p class="card-text">${formatTimestamp(event.date)}</p>
                                     <p class="card-text">${event.description}</p>
                                     <p class="card-text"><strong>Город:</strong> ${event.city}</p>
                                     <p class="card-text"><strong>Категория:</strong> ${event.category}</p>
@@ -347,7 +146,7 @@
                             <div class="card event-card">
                                 <div class="card-body">
                                     <h5 class="card-title">${event.title}</h5>
-                                    <p class="card-text">${event.date}</p>
+                                    <p class="card-text">${formatTimestamp(event.date)}</p>
                                     <p class="card-text">${event.description}</p>
                                     <p class="card-text"><strong>Город:</strong> ${event.city}</p>
                                     <p class="card-text"><strong>Категория:</strong> ${event.category}</p>
@@ -362,7 +161,7 @@
                             <div class="card event-card">
                                 <div class="card-body">
                                     <h5 class="card-title">${event.title}</h5>
-                                    <p class="card-text">${event.date}</p>
+                                    <p class="card-text">${formatTimestamp(event.date)}</p>
                                     <p class="card-text">${event.description}</p>
                                     <p class="card-text"><strong>Город:</strong> ${event.city}</p>
                                     <p class="card-text"><strong>Категория:</strong> ${event.category}</p>
@@ -395,6 +194,7 @@
                     if (participant.status == 1) coins++
                 })
             })
+            sessionStorage.setItem('coins', coins)
             $('#coins').html(coins)
         }
 
@@ -443,6 +243,16 @@
 
             renderEvents(filteredEvents);
         }
+
+        function formatTimestamp(timestamp) {
+            const date = new Date(timestamp);
+
+            const options = { month: 'long', day: 'numeric' };
+
+            // Convert date to format like "September 24"
+            return date.toLocaleDateString('en-US', options);
+        }
+
 
         cityFilter.addEventListener('change', filterEvents);
         categoryFilter.addEventListener('change', filterEvents);

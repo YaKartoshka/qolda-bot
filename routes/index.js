@@ -16,6 +16,10 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/shop',isAuthenticated, (req, res) => {
+    res.render('shop');
+});
+
 router.get('/register', (req, res) => {
     res.render('register');
 });

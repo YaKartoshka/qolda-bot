@@ -100,7 +100,9 @@
                             ambianceElement.removeClass('show success error info too-many-requests').html('');
                             window.location.href = '/';
                         }, 1000);
-                    } else {
+                    } else if(res.r == 4){
+                        ambianceElement.html('Почта уже используется').addClass('error');
+                    }  else {
                         ambianceElement.html('Неизвестная ошибка').addClass('error');
                     } 
 
